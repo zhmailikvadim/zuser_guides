@@ -20,8 +20,11 @@
         "uri": "/sap/opu/odata/sap/ZUG_C_GUIDE_HEADER_CDS/",
         "type": "OData",
         "settings": {
-          "annotations": ["ZUG_C_GUIDE_HEADER_CDS_VAN", "annotation"],
-          "localUri": "localService/metadata.xml",
+          "annotations": [
+            "ZUG_C_GUIDE_HEADER_CDS_VAN",
+            "annotation"
+          ],
+          "localUri": "localService/mainService/metadata.xml",
           "odataVersion": "2.0"
         }
       },
@@ -29,7 +32,7 @@
         "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZUG_C_GUIDE_HEADER_CDS_VAN',Version='0001')/$value/",
         "type": "ODataAnnotation",
         "settings": {
-          "localUri": "localService/ZUG_C_GUIDE_HEADER_CDS_VAN.xml"
+          "localUri": "localService/mainService/ZUG_C_GUIDE_HEADER_CDS_VAN.xml"
         }
       },
       "annotation": {
@@ -136,6 +139,9 @@
               "dateSettings": {
                 "useDateRange": true
               }
+            },
+            "dataLoadSettings": {
+              "loadDataOnAppLaunch": "always"
             }
           }
         },
@@ -155,7 +161,7 @@
                   "mode": "{= ${ui>/editable} ? 'C' : 'D' }",
                   "objectType": "ZBUSGUID",
                   "objectKey": "{uuid_char}",
-                  "isGuid": false,
+                  "isGuid": true,
                   "attributeHandling": {
                     "_VisibleAttributes": {
                       "UPLOADEDBY": true,

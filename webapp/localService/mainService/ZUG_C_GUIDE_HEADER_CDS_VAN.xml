@@ -128,9 +128,6 @@
                                     <PropertyValue Property="Value" Path="zadditional_info"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="changed_by"/>
-                                </Record>
-                                <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="changed_at_data"/>
                                 </Record>
                             </Collection>
@@ -167,13 +164,10 @@
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
                         </Record>
                         <Record Type="UI.DataFieldWithUrl">
-                            <PropertyValue Property="Label" String="Ссылка на обучение"/>
+                            <PropertyValue Property="Label" String="Ссылка"/>
+                            <PropertyValue Property="IconUrl" String="sap-icon://cart"/>
                             <PropertyValue Property="Value" Path="link_guide"/>
-                            <PropertyValue Property="Url" Path="url"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="changed_by"/>
+                            <PropertyValue Property="Url" Path="host_virtual"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
                         </Record>
                         <Record Type="UI.DataField">
@@ -187,7 +181,6 @@
                         <PropertyPath>zsystem</PropertyPath>
                         <PropertyPath>zsubsystem</PropertyPath>
                         <PropertyPath>zname</PropertyPath>
-                        <PropertyPath>changed_by</PropertyPath>
                         <PropertyPath>changed_at_data</PropertyPath>
                     </Collection>
                 </Annotation>
