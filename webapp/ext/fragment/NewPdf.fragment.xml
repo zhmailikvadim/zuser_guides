@@ -1,0 +1,29 @@
+<mvc:View
+	
+    id="idViewpdf"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	height="100%">
+	<mvc:content>
+
+	<FlexBox id="_IDGenFlexBox1" direction="Column" renderType="Div" class="sapUiSmallMargin">
+	  <ScrollContainer id="Scr"
+				height="100%"
+				width="100%"
+				horizontal="true"
+				vertical="true">
+				
+					
+					<PDFViewer id="_IDGenPDFViewer" source="{/Source}" isTrustedSource="true" title="{/Title}" height="{/Height}" >
+						<layoutData>
+							<FlexItemData id="_IDGenFlexItemData" growFactor="1" />
+						</layoutData>
+					</PDFViewer>
+				
+			</ScrollContainer>
+	</FlexBox>
+        
+   
+		
+	 </mvc:content>
+</mvc:View>

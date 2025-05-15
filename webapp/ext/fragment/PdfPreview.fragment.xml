@@ -1,0 +1,28 @@
+<mvc:View
+	controllerName="zuguides.ext.controller.ObjectPageExt"
+    id="idViewpdf"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	height="100%">
+	<Page id="idPage">
+		<VBox id="idVBox">
+			<ScrollContainer id="Scr"
+				height="100%"
+				width="100%"
+				horizontal="true"
+				vertical="true">
+				<FlexBox id="_IDGenFlexBox" direction="Column" renderType="Div" class="sapUiSmallMargin">
+					<FlexBox id="_IDGenFlexBox2">
+						<Button id="_IDGenButton" text="Correctly Displayed" press="onCorrectPathClick"/>
+						<Button id="_IDGenButton1" text="Loading Error" press="onIncorrectPathClick"/>
+					</FlexBox>
+					<PDFViewer id="_IDGenPDFViewer" source="{/Source}" isTrustedSource="true" title="{/Title}" height="{/Height}" >
+						<layoutData>
+							<FlexItemData id="_IDGenFlexItemData" growFactor="1" />
+						</layoutData>
+					</PDFViewer>
+				</FlexBox>
+			</ScrollContainer>
+		</VBox>
+	</Page>
+</mvc:View>
