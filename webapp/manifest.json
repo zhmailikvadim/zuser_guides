@@ -118,18 +118,6 @@
         },
         "extends": {
             "extensions": {
-                "sap.ui.viewExtensions": {
-                    "sap.suite.ui.generic.template.ObjectPage.view.Details": {
-                        "AfterFacet|ZUG_C_GUIDE_HEADER|HEADER": {
-                            "type": "XML",
-                            "className": "sap.ui.core.Fragment",
-                            "fragmentName": "zuserguides.ext.fragment.NewPdf",
-                            "sap.ui.generic.app": {
-                                "title": "Документы"
-                            }
-                        }
-                    }
-                },
                 "sap.ui.controllerExtensions": {
                     "sap.suite.ui.generic.template.ObjectPage.view.Details": {
                         "controllerName": "zuserguides.ext.controller.ObjectPageExt",
@@ -139,6 +127,19 @@
                                 "Header": {
                                     "Actions": {}
                                 }
+                            }
+                        }
+                    }
+                },
+                "sap.ui.viewExtensions": {
+                    "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+                        "AfterFacet|ZUG_C_GUIDE_HEADER|HEADER": {
+                            "type": "XML",
+                            "className": "sap.ui.core.mvc.View",
+                            "viewName": "zuserguides.ext.view.NewViewTest",
+                            "id" : "idViewpdf",
+                            "sap.ui.generic.app": {
+                                "title": "ДокументТест"
                             }
                         }
                     }

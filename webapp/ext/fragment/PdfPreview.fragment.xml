@@ -1,6 +1,6 @@
 <mvc:View
 	controllerName="zuguides.ext.controller.ObjectPageExt"
-    id="idViewpdf"
+    id="idViewpdf1"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
 	height="100%">
