@@ -2,7 +2,7 @@
 xmlns="sap.m" 
 id="idViewpdf" 
 xmlns:mvc="sap.ui.core.mvc" >
-    <Text id="_IDGenText" text="1112"/>
+    <Text id="_IDGenText" />
    
         <FlexBox id="_IDGenFlexBox1" direction="Column" renderType="Div" class="sapUiSmallMargin">
                     

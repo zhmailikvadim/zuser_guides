@@ -139,7 +139,7 @@
                             "viewName": "zuserguides.ext.view.NewViewTest",
                             "id" : "idViewpdf",
                             "sap.ui.generic.app": {
-                                "title": "ДокументТест"
+                                "title": "Документ"
                             }
                         }
                     }
@@ -186,7 +186,7 @@
                             "simple::Attachments": {
                                 "id": "simple::Attachments",
                                 "componentName": "sap.se.mi.plm.lib.attachmentservice.attachment.components.stcomponent",
-                                "title": "{{Attachments}}",
+                                "title": "{{Вложения}}",
                                 "settings": {
                                     "mode": "{= ${ui>/editable} ? 'C' : 'D' }",
                                     "objectType": "ZBUSGUID",
