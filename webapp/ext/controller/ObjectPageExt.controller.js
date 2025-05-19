@@ -12,7 +12,8 @@ sap.ui.define([
 
         onInit: function () {
 
-            this.extensionAPI.attachPageDataLoaded(this.onDetailsLoaded, this);
+            this.extensionAPI.attachPageDataLoaded(this.onDetailsLoaded.bind(this), this);
+            
  
             var url1 = "/sap/opu/odata/sap/ZCV_ATTACHMENT_SRV_SRV/zfilemSet(%27";
             var url2 = "%27)/$value";
@@ -37,6 +38,14 @@ sap.ui.define([
                     }
               
             }
+           
+        },
+
+        _onObjectMatched: function(oEvent) {
+            var sObjectId = oEvent.getParameter("arguments").objectId;
+            console.log("Страница загружена, ID объекта:", sObjectId);
+            
+            // Здесь можно обновлять PDF Viewer и другие данные
         },
     
           onBeforeRendering: function () {
@@ -56,10 +65,25 @@ sap.ui.define([
        
           onDetailsLoaded: function (event, this1) {
            // MessageToast.show('');
+          
             var sPath = event.context.sPath; // has the context path
-       
             var contextObj = event.context.getObject(); //contains the context Object and has all the properties bound in the list report Item
-           // initPdfViewer("2");
+
+            var oModeltest = new JSONModel();
+           oModeltest.setData({
+               Source: "",
+               Title: "Просмотр файла",
+               Height: "600px"
+           });
+          
+           var url1 = "/sap/opu/odata/sap/ZCV_ATTACHMENT_SRV_SRV/zfilemSet(%27";
+           var url2 = "%27)/$value";
+           if ( contextObj.uuid_char !== "") {
+            this.getView().byId("idViewpdf").setModel(oModeltest);
+            var urlt = url1 + contextObj.uuid_char + url2;
+            this.getView().byId("idViewpdf").byId("_IDGenPDFViewer").setSource(urlt);
+           }
+
           }
 
     };
